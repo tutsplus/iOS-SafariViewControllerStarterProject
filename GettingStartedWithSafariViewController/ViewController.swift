@@ -8,19 +8,24 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
+    var urlString:String = "http://www.tutsplus.com"
 
-    override func viewDidLoad() {
+    //MARK: Lifecycle
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-
+    //MARK: Web Content Presenting
     @IBAction func openInSafari(sender: AnyObject)
     {
         //TODO: Open in safari
