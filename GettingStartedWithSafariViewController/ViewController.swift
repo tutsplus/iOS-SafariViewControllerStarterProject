@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    var urlString:String = "http://www.tutsplus.com"
+    private var urlString:String = "https://google.com"
 
     //MARK: Lifecycle
     override func viewDidLoad()
@@ -28,7 +28,7 @@ class ViewController: UIViewController
     //MARK: Web Content Presenting
     @IBAction func openInSafari(sender: AnyObject)
     {
-        //TODO: Open in safari
+        //TODO: Open in native safari
     }
     
     @IBAction func openWithSafariVC(sender: AnyObject)
@@ -36,9 +36,9 @@ class ViewController: UIViewController
         //TODO: Open in safari view controller
     }
     
-    override func performSegueWithIdentifier(identifier: String, sender: AnyObject?)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        //Open in webkit
+        //TODO: open in webview
     }
 }
 

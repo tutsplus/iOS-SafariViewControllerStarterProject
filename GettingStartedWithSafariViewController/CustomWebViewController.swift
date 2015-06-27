@@ -11,16 +11,26 @@ import WebKit
 
 class CustomWebViewController: UIViewController
 {
-    var webView:UIWebView!
+    var urlString:String?
+    private var webView:UIWebView!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
         webView = UIWebView(frame: self.view.frame)
-        let url = NSURL(string: "http://google.com")!
-        let request = NSURLRequest(URL: url)
-        webView.loadRequest(request)
+        var url:NSURL
+        
+        if let desiredURL = urlString
+        {
+            url = NSURL(string: desiredURL)!
+        }
+        else
+        {
+            url = NSURL(string: "https://www.google.com")!
+        }
+        
+        webView.loadRequest(NSURLRequest(URL: url))
         self.view.addSubview(webView)
     }
 
